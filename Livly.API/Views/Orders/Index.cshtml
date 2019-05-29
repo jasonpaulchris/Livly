@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Livly.API.Models.TblOrders>
+
+@{
+    ViewData["Title"] = "Delivery Devil";
+}
+
+<h2>Delivery Devil</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Order Time
+            </th>
+            <th>
+                Order Amount
+            </th>
+            <th>
+                Customer Name
+            </th>
+            <th>
+                Customer Address
+            </th>
+            <th>
+                Restaurant Name
+            </th>
+            <th>
+                Restaurant Address
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderAmount)
+                </td>
+                <td>
+                    <a asp-controller="Customers" asp-action="Details" asp-route-id=@item.CustomerId>@Html.DisplayFor(modelItem => item.Customers.FirstName) @Html.DisplayFor(modelItem => item.Customers.LastName)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customers.Street) @Html.DisplayFor(modelItem => item.Customers.City)  @Html.DisplayFor(modelItem => item.Customers.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Restaurants.RestaurantName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Restaurants.Street) @Html.DisplayFor(modelItem => item.Restaurants.City)  @Html.DisplayFor(modelItem => item.Restaurants.State)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

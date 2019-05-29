@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Livly.API.Models.TblOrders>
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Order History</h2>
+
+<div>
+
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+
+                    Order Time
+                </th>
+
+                <th>
+                    Order Amount
+                </th>
+
+                <th>
+                    Tip Amount
+                </th>
+                <th>
+                    Restaurant
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Restaurants.RestaurantName)
+                    </td>
+
+                </tr>
+            }
+    </table>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

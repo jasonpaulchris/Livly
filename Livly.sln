@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livly.API", "Livly.API\Livly.API.csproj", "{CBEEA2F2-3B8F-4547-9321-90A11A883054}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBEEA2F2-3B8F-4547-9321-90A11A883054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEEA2F2-3B8F-4547-9321-90A11A883054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEEA2F2-3B8F-4547-9321-90A11A883054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEEA2F2-3B8F-4547-9321-90A11A883054}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAE22478-AF6D-42FB-A848-0290272AB811}
+	EndGlobalSection
+EndGlobal
